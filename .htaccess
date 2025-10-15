@@ -1,0 +1,20 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([a-zA-Z0-9_-]+)/?$ View/pages/profile.php?username=$1 [QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^status/([0-9_-]+)/?$ View/pages/status.php?post_id=$1 [QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^index.php/?$ View/pages/index.php [QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^home.php/?$ View/pages/home.php [QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^logout.php/?$ View/includes/logout.php [QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^notification.php/?$ View/pages/notification.php [QSA]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^account.php/?$ View/pages/account.php [QSA]
